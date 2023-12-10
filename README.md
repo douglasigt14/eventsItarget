@@ -1,8 +1,16 @@
-DOCKER 
+Pré requisitos 
+
+Docker
+Docker-compose
+composer
+php
+
+----------------------------------------------
+Docker
 
 sudo docker-compose up -d --build 
-
-LARAVEL
+----------------------------------------------
+Laravel
 
 composer install 
 php artisan key:generate 
