@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
+Route::get('/', function () {
+    return "API 1.0";
+});
 
 Route::middleware('auth:api')->group(function () {
     // Rotas protegidas pelo middleware
