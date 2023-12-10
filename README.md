@@ -1,18 +1,18 @@
 Pré requisitos 
 
 Docker
-Docker-compose
-composer
-php
+Docker-compose <br>
+composer <br>
+php <br>
 
 ----------------------------------------------
-Docker
+Docker <br>
 
-sudo docker-compose up -d --build 
+sudo docker-compose up -d --build  <br>
 ----------------------------------------------
-Laravel
+Laravel <br>
 
-composer install 
-php artisan key:generate 
-php artisan migrate
+composer install  <br>
+php artisan key:generate <br> 
+php artisan migrate <br>
 
