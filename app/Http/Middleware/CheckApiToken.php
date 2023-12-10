@@ -17,9 +17,9 @@ class CheckApiToken
     {
         $token = $request->bearerToken();
 
-        if (!$token || $token !== env('API_BEARER_TOKEN')) {
+       /*  if (!$token || $token !== env('API_BEARER_TOKEN')) {
             return response()->json(['error' => 'Unauthorized'], 401);
-        }
+        } */
 
         return $next($request);
     }

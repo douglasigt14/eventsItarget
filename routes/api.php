@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,10 +18,13 @@ Route::get('/', function () {
     return "API 1.0";
 });
 
-Route::middleware('auth:api')->group(function () {
+Route::get('/events', [EventController::class, 'show']);
+
+
+/* Route::middleware('auth:api')->group(function () {
     // Rotas protegidas pelo middleware
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
-});
+}); */
