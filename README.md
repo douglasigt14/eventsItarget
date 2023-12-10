@@ -1,6 +1,6 @@
 Pré requisitos 
 
-Docker
+Docker <br>
 Docker-compose <br>
 composer <br>
 php <br>
@@ -9,6 +9,7 @@ php <br>
 Docker <br>
 
 sudo docker-compose up -d --build  <br>
+
 ----------------------------------------------
 Laravel <br>
 
