@@ -34,7 +34,7 @@ class EventController extends Controller
     public function singup(Request $request){
         $payload = $request->all();
 
-
+        try {
             foreach ($payload['events'] as $event_id) {
                 $data = [
                     'name' => $payload['name'],
@@ -42,9 +42,11 @@ class EventController extends Controller
                     'email' => $payload['email'],
                     'event_id' => $event_id
                 ];
-                Registered::updateOrCreate(['cpf' => $$payload ['cpf']], $data);
+                Registered::updateOrCreate(['cpf' => $payload ['cpf'],'event_id' => $event_id ], $data);
             }
-
-        return $payload;
+        }
+        catch (\Exception $e) {
+            throw $e;
+        }
     }
 }
