@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Models\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Validation\Rules\Exists;
 
 class EventController extends Controller
 {
@@ -31,6 +33,20 @@ class EventController extends Controller
     }
     public function singup(Request $request){
         $payload = $request->all();
+
+
+            foreach ($payload['events'] as $event_id) {
+                $data = [
+                    'name' => $payload['name'],
+                    'cpf' => $payload['cpf'],
+                    'email' => $payload['email'],
+                    'event_id' => $event_id
+                ];
+                Registered::updateOrCreate(['cpf' => $$payload ['cpf']], $data);
+
+       
+
+        //
 
         return $payload;
     }

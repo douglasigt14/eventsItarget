@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Registered extends Model
 {
+    protected $table = "registereds";
     protected $fillable = ['name', 'cpf', 'email', 'event_id'];
 
     public function event()
