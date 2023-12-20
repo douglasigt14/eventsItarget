@@ -43,10 +43,7 @@ class EventController extends Controller
                     'event_id' => $event_id
                 ];
                 Registered::updateOrCreate(['cpf' => $$payload ['cpf']], $data);
-
-       
-
-        //
+            }
 
         return $payload;
     }
