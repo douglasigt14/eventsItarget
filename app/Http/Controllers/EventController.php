@@ -53,7 +53,7 @@ class EventController extends Controller
     public function list($event_id){
        
         try {
-            $registereds = Registered::where('event_id',$event_id)->get();
+            $registereds = Registered::select(["name","cpf","email"])->where('event_id',$event_id)->get();
 
             return   $registereds;
             
