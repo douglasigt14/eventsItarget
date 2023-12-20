@@ -18,16 +18,6 @@ Route::get('/', function () {
     return "API 1.0";
 });
 
-
-
-
- Route::middleware('auth:api')->group(function () {
-    Route::get('/events', [EventController::class, 'show']);
-    Route::post('/singup', [EventController::class, 'singup']);
-    Route::get('/list/{event_id}', [EventController::class, 'list']);
-});
-
-/*
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-}); */
+Route::get('/events', [EventController::class, 'show']);
+Route::post('/singup', [EventController::class, 'singup']);
+Route::get('/list/{event_id}', [EventController::class, 'list']);
