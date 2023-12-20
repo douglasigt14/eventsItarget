@@ -49,4 +49,18 @@ class EventController extends Controller
             throw $e;
         }
     }
+
+    public function list($event_id){
+       
+        try {
+            $registereds = Registered::where('event_id',$event_id)->get();
+
+            return   $registereds;
+            
+        }  catch (\Exception $e) {
+            throw $e;
+        }
+    }
+
+    
 }
