@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/events', [EventController::class, 'show']);
+Route::post('/singup', [EventController::class, 'singup']);
 
 
 /* Route::middleware('auth:api')->group(function () {
